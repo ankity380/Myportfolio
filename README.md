@@ -1,1 +1,58 @@
 # Myportfolio
+import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-100 text-gray-900">
+      {/* Header */}
+      <header className="bg-blue-600 text-white p-6 text-center text-xl font-semibold">
+        Ankit Kumar Yadav
+      </header>
+
+      {/* Hero Section */}
+      <section className="text-center py-16">
+        <h1 className="text-4xl font-bold">Hi, I'm Ankit</h1>
+        <p className="text-lg mt-4">Full Stack Developer | Java Enthusiast | SEO Specialist</p>
+      </section>
+
+      {/* Projects Section */}
+      <section className="p-8">
+        <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold">Doctor Appointment Booking System</h3>
+            <p className="text-gray-700">A web application to book and manage doctor appointments.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold">Insurance Claim Fraud Detection</h3>
+            <p className="text-gray-700">A machine learning-based system to detect fraudulent insurance claims.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="p-8 bg-gray-200">
+        <h2 className="text-3xl font-bold text-center mb-6">Skills</h2>
+        <div className="flex flex-wrap justify-center gap-4">
+          {["HTML", "CSS", "JavaScript", "React", "Node.js", "Java", "SEO", "MySQL", "GitHub"].map((skill) => (
+            <span key={skill} className="bg-blue-500 text-white px-4 py-2 rounded-full">{skill}</span>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="text-center p-8">
+        <h2 className="text-3xl font-bold mb-6">Contact</h2>
+        <div className="flex justify-center gap-6 text-blue-600 text-3xl">
+          <a href="#" className="hover:text-blue-800"><FaGithub /></a>
+          <a href="#" className="hover:text-blue-800"><FaLinkedin /></a>
+          <a href="#" className="hover:text-blue-800"><FaEnvelope /></a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-4 bg-gray-800 text-white">© 2025 Ankit Kumar Yadav</footer>
+    </div>
+  );
+}
